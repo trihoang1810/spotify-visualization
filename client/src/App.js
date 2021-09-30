@@ -1,10 +1,10 @@
 import {useState,useEffect} from 'react';
 import {accessToken, logout} from './spotify.js';
 import {BrowserRouter as Router, Switch, Route, useLocation} from 'react-router-dom';
-import {GlobalStyle} from './styles'
+import {GlobalStyle, StyledMainScreen} from './styles'
 import {LoginPage, Profile, TopArtists,TopTracks,Playlists, Playlist} from './pages';
 import styled from 'styled-components/macro';
-
+import {NavBar} from './components';
 
 const StyledLogoutButton = styled.button`
   position: absolute;
@@ -28,7 +28,7 @@ function ScrollToTop() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-
+  
   return null;
 }
 function App() {
@@ -38,13 +38,17 @@ function App() {
   },[]);
   return (
     <div className="App">
+   
     <GlobalStyle/>
       <header className="App-header">
                {!token ? (
           <LoginPage/>
         ) : (<div>
+          
+          <StyledMainScreen>
           <StyledLogoutButton onClick={logout}>Log Out</StyledLogoutButton>
           <Router>
+          <NavBar/>
           <ScrollToTop/>
             <Switch>
               <Route path="/top-artists">
@@ -63,8 +67,9 @@ function App() {
               <Route path="/">
                 <Profile/>
               </Route>
-            </Switch>
-          </Router>
+              </Switch>
+            </Router>
+            </StyledMainScreen>
           </div>
         )}
       </header>

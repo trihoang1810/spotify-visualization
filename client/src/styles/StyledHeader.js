@@ -78,6 +78,7 @@ h1.header__name {
     margin: 0;
     
     span {
+        font-size: 16px;
         display: flex;
         align-items: center;
         &:not(:last-of-type)::after{
@@ -85,7 +86,7 @@ h1.header__name {
             display: block;
             margin: 0 var(--spacing-xs);
             color: var(--light-grey);
-            font-size: 13px;
+            font-size: 16px;
         }
     }
 }

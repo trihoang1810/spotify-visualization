@@ -4,3 +4,5 @@ export { default as StyledHeader } from './StyledHeader';
 export { default as StyledSection } from './StyledSection';
 export { default as StyledTrackList } from './StyledTrackList';
 export { default as StyledRangeButtons} from './StyledRangeButtons';
+export { default as StyledMainScreen} from './StyledMainScreen';
+export { default as StyledNavBar} from './StyledNavBar';

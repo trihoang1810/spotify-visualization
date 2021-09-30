@@ -25,6 +25,7 @@ const StyledTrackList = styled.ul`
     &:hover,
     &:focus {
       background-color: var(--dark-grey);
+      cursor: pointer;
     }
   }
 
