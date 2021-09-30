@@ -27,7 +27,7 @@ padding: var(--spacing-sm) var(--spacing-xl);
 const LOGIN_URI =
   process.env.NODE_ENV !== 'production'
     ? 'http://localhost:8888/login'
-    : 'https://spotify-profile-v2.herokuapp.com/login';
+    : 'https://your-spotify-profile.herokuapp.com/login';
 
 const LoginPage = () => (
   <StyledLoginContainer>
